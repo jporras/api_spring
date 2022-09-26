@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import com.davivienda.prueba.modelo.Usuario;
 import com.davivienda.prueba.servicio.UsuarioServicio;
 
+//@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins = "http://localhost:8080", allowCredentials = "true", methods = {RequestMethod.OPTIONS, RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 @RestController
 @RequestMapping("/api")
 public class UsuarioControlador {

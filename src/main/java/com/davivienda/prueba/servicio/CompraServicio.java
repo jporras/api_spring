@@ -35,5 +35,7 @@ public class CompraServicio {
     public void eliminar(String idConsulta){
         Long id = Long.parseLong(idConsulta);
         repositorio.deleteById(id);
-    } 
+    }
+
+    
 }

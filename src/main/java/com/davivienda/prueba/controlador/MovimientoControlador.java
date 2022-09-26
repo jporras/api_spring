@@ -30,6 +30,11 @@ public class MovimientoControlador {
         return movimientoServicio.buscar(id);
     }
 
+    @GetMapping("/movimiento/cuentaId/{id}")
+    public ArrayList<Movimiento> listarCuentaMovimiento(@PathVariable Long id){
+        return (ArrayList<Movimiento>) movimientoServicio.listarCuentaMovimiento(id);
+    }
+
     @PutMapping("/movimiento")
     public Movimiento actualizar(@RequestBody Movimiento movimiento){
         return movimientoServicio.guardar(movimiento);

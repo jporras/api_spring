@@ -14,9 +14,11 @@ public class Movimiento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = false)
+    @ManyToOne(targetEntity = Cuenta.class, cascade = CascadeType.ALL)
+    @JoinColumn(name = "mc_fk", referencedColumnName = "id")
     private Long cuentaId;
-    @Column(nullable = false)
+    @ManyToOne(targetEntity = TipoMovimiento.class, cascade = CascadeType.ALL)
+    @JoinColumn(name = "mt_fk", referencedColumnName = "id")
     private Long tipoMovimientoId;
     @Column(nullable = false)
     private Date fecha;

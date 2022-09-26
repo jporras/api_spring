@@ -36,4 +36,8 @@ public class MovimientoServicio {
         Long id = Long.parseLong(idConsulta);
         repositorio.deleteById(id);
     }
+
+    public ArrayList<Movimiento> listarCuentaMovimiento(Long cuentaId){
+        return repositorio.findByCuentaId(cuentaId);
+    }
 }
